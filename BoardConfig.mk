@@ -3,7 +3,7 @@ USE_CAMERA_STUB := false
 -include vendor/huawei/u8800pro/BoardConfigVendor.mk
 
 # CPU and Platform
-TARGET_BOARD_PLATFORM := msm7x27a
+TARGET_BOARD_PLATFORM := msm7x30
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 
 TARGET_NO_BOOTLOADER := true
@@ -94,21 +94,17 @@ BOARD_FM_DEVICE := bcm4330
 BOARD_GLOBAL_CFLAGS += -DHAVE_FM_RADIO
 
 # Wi-Fi
-BOARD_WLAN_DEVICE := bcmdhd
+WIFI_BOARD_NAME_HUAWEI := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
-BOARD_WPA_SUPPLICANT_DRIVER := NL80211
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_bcmdhd
-BOARD_HOSTAPD_DRIVER := NL80211
-BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_bcmdhd
-WIFI_DRIVER_FW_PATH_AP := "/system/etc/fw_4330_b2.bin"
-WIFI_DRIVER_FW_PATH_STA := "/system/etc/fw_4330_b2.bin"
-WIFI_DRIVER_FW_PATH_P2P := "/system/etc/fw_4330_b2.bin"
-WIFI_DRIVER_FW_PATH_PARAM := "/sys/module/dhd/parameters/firmware_path"
-WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/dhd.ko"
-WIFI_DRIVER_MODULE_ARG := "firmware_path=/system/etc/fw_4330_b2.bin nvram_path=/system/etc/nvram_4330.txt"
-WIFI_DRIVER_MODULE_NAME := "dhd"
-WIFI_EXT_MODULE_PATH := "/system/lib/modules/cfg80211.ko"
-WIFI_EXT_MODULE_NAME := "cfg80211"
+HOSTAPD_VERSION := VER_0_8_X
+BOARD_WPA_SUPPLICANT_DRIVER := WEXT
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_wext
+BOARD_WLAN_DEVICE := bcm4329
+WIFI_DRIVER_MODULE_PATH     := "/system/wifi/dhd.ko"
+WIFI_DRIVER_FW_PATH_STA     := "/system/wifi/firmware.bin"
+WIFI_DRIVER_FW_PATH_AP      := "/system/wifi/firmware_apsta.bin"
+WIFI_DRIVER_MODULE_NAME     :=  "dhd"
+WIFI_DRIVER_MODULE_ARG      :=  "firmware_path=/system/wifi/firmware.bin nvram_path=/system/wifi/nvram.txt"
 
 TARGET_CUSTOM_WIFI := ../../device/huawei/u8800pro/libhardware_legacy/wifi/wifi.c
 

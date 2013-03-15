@@ -1,6 +1,6 @@
 USE_CAMERA_STUB := false
 
--include vendor/huawei/u8815/BoardConfigVendor.mk
+-include vendor/huawei/u8800pro/BoardConfigVendor.mk
 
 # CPU and Platform
 TARGET_BOARD_PLATFORM := msm7x27a
@@ -32,10 +32,10 @@ TARGET_USES_16BPPSURFACE_FOR_OPAQUE := true
 
 TARGET_USES_ION := false
 
-TARGET_BOOTLOADER_BOARD_NAME := u8815
-TARGET_OTA_ASSERT_DEVICE := u8815,hwu8815,u8818,hwu8818
+TARGET_BOOTLOADER_BOARD_NAME := u8800pro
+TARGET_OTA_ASSERT_DEVICE := u8800pro,hwu8800pro
 
-TARGET_SPECIFIC_HEADER_PATH := device/huawei/u8815/include
+TARGET_SPECIFIC_HEADER_PATH := device/huawei/u8800pro/include
 
 # Audio
 TARGET_PROVIDES_LIBAUDIO := true
@@ -50,14 +50,14 @@ COMMON_GLOBAL_CFLAGS += -DICS_CAMERA_BLOB
 # GPS
 BOARD_USES_QCOM_GPS := true
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
-BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := u8815
+BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := u8800pro
 
 # RIL
-BOARD_RIL_CLASS := ../../../device/huawei/u8815/ril/
+BOARD_RIL_CLASS := ../../../device/huawei/u8800pro/ril/
 
 # Graphics
 COMMON_GLOBAL_CFLAGS += -DANCIENT_GL
-BOARD_EGL_CFG := device/huawei/u8815/configs/egl.cfg
+BOARD_EGL_CFG := device/huawei/u8800pro/configs/egl.cfg
 USE_OPENGL_RENDERER := true
 BOARD_ADRENO_DECIDE_TEXTURE_TARGET := true
 BOARD_AVOID_DRAW_TEXTURE_EXTENSION := true
@@ -85,8 +85,8 @@ BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/huawei/u8815/bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/huawei/u8815/bluetooth/vnd_u8815.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/huawei/u8800pro/bluetooth
+BOARD_BLUEDROID_VENDOR_CONF := device/huawei/u8800pro/bluetooth/vnd_u8800pro.txt
 
 # FM Radio
 BOARD_HAVE_FM_RADIO := true
@@ -110,11 +110,11 @@ WIFI_DRIVER_MODULE_NAME := "dhd"
 WIFI_EXT_MODULE_PATH := "/system/lib/modules/cfg80211.ko"
 WIFI_EXT_MODULE_NAME := "cfg80211"
 
-TARGET_CUSTOM_WIFI := ../../device/huawei/u8815/libhardware_legacy/wifi/wifi.c
+TARGET_CUSTOM_WIFI := ../../device/huawei/u8800pro/libhardware_legacy/wifi/wifi.c
 
 # Kernel 
-TARGET_KERNEL_SOURCE := kernel/huawei/u8815
-TARGET_KERNEL_CONFIG := cyanogenmod_u8815_defconfig
+TARGET_KERNEL_SOURCE := kernel/huawei/u8800pro
+TARGET_KERNEL_CONFIG := cyanogenmod_u8800pro_defconfig
 BOARD_KERNEL_CMDLINE := androidboot.hardware=huawei
 BOARD_KERNEL_BASE := 0x00200000
 BOARD_PAGE_SIZE := 2048
@@ -122,9 +122,9 @@ BOARD_PAGE_SIZE := 2048
 # Recovery
 #BOARD_TOUCH_RECOVERY := true
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
-BOARD_CUSTOM_GRAPHICS := ../../../device/huawei/u8815/recovery/graphics.c
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/huawei/u8815/recovery/recovery-keys.c
-TARGET_RECOVERY_INITRC := device/huawei/u8815/recovery/etc/init.rc
+BOARD_CUSTOM_GRAPHICS := ../../../device/huawei/u8800pro/recovery/graphics.c
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/huawei/u8800pro/recovery/recovery-keys.c
+TARGET_RECOVERY_INITRC := device/huawei/u8800pro/recovery/etc/init.rc
 BOARD_UMS_LUNFILE := /sys/class/android_usb/android0/f_mass_storage/lun%d/file
 
 # Partitions

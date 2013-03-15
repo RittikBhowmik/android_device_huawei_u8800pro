@@ -18,6 +18,6 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#define BTM_DEF_LOCAL_NAME   "Ascend G300"
+#define BTM_DEF_LOCAL_NAME   "U8800Pro"
 
 #endif

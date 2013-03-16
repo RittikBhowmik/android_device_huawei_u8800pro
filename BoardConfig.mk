@@ -123,6 +123,11 @@ BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/huawei/u8800pro/recovery/recove
 TARGET_RECOVERY_INITRC := device/huawei/u8800pro/recovery/etc/init.rc
 BOARD_UMS_LUNFILE := /sys/class/android_usb/android0/f_mass_storage/lun%d/file
 
+# Custom releasetools for old partition table.
+TARGET_PROVIDES_RELEASETOOLS := true
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./device/huawei/u8800pro/releasetools/ota_from_target_files
+#TARGET_CUSTOM_RELEASETOOL := device/huawei/u8800pro/tools/releasetools
+
 # Partitions
 BOARD_DATA_DEVICE := /dev/block/mmcblk0p13
 BOARD_DATA_FILESYSTEM := ext4

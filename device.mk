@@ -60,9 +60,6 @@ PRODUCT_COPY_FILES += \
     device/huawei/u8800pro/ramdisk/init.huawei.usb.rc:root/init.huawei.usb.rc
 
 PRODUCT_COPY_FILES += \
-    device/huawei/u8800pro/prebuilt/fw_4330_b2.bin:system/etc/fw_4330_b2.bin \
-    device/huawei/u8800pro/prebuilt/BCM4330.hcd:system/etc/bluetooth/BCM4330.hcd \
-    device/huawei/u8800pro/configs/nvram_4330.txt:system/etc/nvram_4330.txt \
     device/huawei/u8800pro/configs/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
     device/huawei/u8800pro/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 

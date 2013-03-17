@@ -33,7 +33,7 @@ TARGET_USES_16BPPSURFACE_FOR_OPAQUE := true
 TARGET_USES_ION := false
 
 TARGET_BOOTLOADER_BOARD_NAME := u8800pro
-TARGET_OTA_ASSERT_DEVICE := u8800pro,hwu8800pro
+TARGET_OTA_ASSERT_DEVICE := u8800pro,hwu8800pro,hwu8800Pro
 
 TARGET_SPECIFIC_HEADER_PATH := device/huawei/u8800pro/include
 
@@ -111,9 +111,9 @@ TARGET_CUSTOM_WIFI := ../../device/huawei/u8800pro/libhardware_legacy/wifi/wifi.
 # Kernel 
 TARGET_KERNEL_SOURCE := kernel/huawei/u8800pro
 TARGET_KERNEL_CONFIG := cyanogenmod_u8800pro_defconfig
-BOARD_KERNEL_CMDLINE := androidboot.hardware=huawei
+BOARD_KERNEL_CMDLINE := console=ttyDCC0 androidboot.hardware=huawei
 BOARD_KERNEL_BASE := 0x00200000
-BOARD_PAGE_SIZE := 2048
+BOARD_KERNEL_PAGESIZE := 4096
 
 # Recovery
 #BOARD_TOUCH_RECOVERY := true

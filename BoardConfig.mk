@@ -122,6 +122,7 @@ BOARD_CUSTOM_GRAPHICS := ../../../device/huawei/u8800pro/recovery/graphics.c
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/huawei/u8800pro/recovery/recovery-keys.c
 TARGET_RECOVERY_INITRC := device/huawei/u8800pro/recovery/etc/init.rc
 BOARD_UMS_LUNFILE := /sys/class/android_usb/android0/f_mass_storage/lun%d/file
+BOARD_HAS_NO_SELECT_BUTTON := true
 
 # Custom releasetools for old partition table.
 TARGET_PROVIDES_RELEASETOOLS := true

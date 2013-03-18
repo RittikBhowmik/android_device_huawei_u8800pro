@@ -33,6 +33,7 @@ int device_handle_key(int key_code, int visible) {
                 return SELECT_ITEM;
 
             case KEY_BACK:
+            case BTN_TOUCH:
                 if (!ui_root_menu) {
                     return GO_BACK;
                 }

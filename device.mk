@@ -15,6 +15,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril.v3=skipsuggestedretrytime
 endif
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.cwm.forbid_format=/boot,/cust,/fat
+
 # Video
 PRODUCT_PACKAGES += \
     libI420colorconvert \
